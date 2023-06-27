@@ -2,7 +2,7 @@
 <h1>hello</h1>
 
 {% else %}
-<form method="POST" action="{ url 'home'%}">
+<form method="POST" action="{% url 'home'%}">
   {% csrf_token %}
   <div class="mb-3">
     <input
@@ -19,7 +19,7 @@
       type="password"
       class="form-control"
       name="password"
-      placeholder=Password"
+      placeholder="Password"
       required
     />
   </div>
