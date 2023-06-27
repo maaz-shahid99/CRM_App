@@ -1,13 +1,13 @@
 import mysql.connector
 
-databse = mysql.connector.connect(
-    root = 'localhost',
-    user = 'root',
-    passwd = '0000'
-)
+dataBase = mysql.connector.connect(
+	host = 'localhost',
+	user = 'root',
+	passwd = '0000'
 
+	)
 #prepare cursor object
-cursorObject = databse.cursor()
+cursorObject = dataBase.cursor()
 
 # Create a Database
 
