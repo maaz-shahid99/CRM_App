@@ -36,5 +36,7 @@ def home(request):
         
     #     else:
     #         messages.success(request, "There Was An Error Logging In, Please Try Again.")
-# def logout_user(request):
-#     pass
+def logout_user(request):
+    logout(request)
+    messages.success(request, "You Have Been Logged Out.")
+    return redirect('home') 
