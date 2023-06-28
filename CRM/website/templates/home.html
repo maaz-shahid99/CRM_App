@@ -1,9 +1,16 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 
+{% block content %}
+
+{% if user.is_authenticated%}
+<h1>Hello</h1>
+
+{% else %}
 <div class="col-md-6 offset-md-5">
   <br />
   <h1>Login</h1>
   <br />
 </div>
 <div class="col-md-3 offset-md-4">{% include 'forms.html'%}</div>
+{% endif %}
 {% endblock %}
