@@ -4,10 +4,11 @@ from django import forms
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(label="", widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Email Address'}))
-    first_name = forms.CharField(label="",widget= forms.TextInput( max_length=30,attrs={'class':'form-control', 'placeholder': 'First Name'}))
-    last_name = forms.CharField(label="",widget= forms.TextInput(max_length= 30, attrs={'class':'form-control', 'placeholder': 'Last Name'}))
-    ph_number = forms.CharField(label="",widget= forms.TextInput(max_length= 10, attrs={'class':'form-control', 'placeholder': 'Phone Mumber'}))
-
+    first_name = forms.CharField(label="",widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'First Name'}))
+    last_name = forms.CharField(label="",widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Last Name'}))
+    ph_number = forms.CharField(label="",widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Phone Mumber'}))
+    password_1 = forms.CharField(label="",widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Password 1'}))
+    password_2 = forms.CharField(label="",widget= forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Password 2'}))
 
     class Meta:
         model = User
